@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ta2d7qjksgs6"]
+
+[ext_resource type="Material" uid="uid://da6qj32l3x5cl" path="res://Materials/TestMaterial.tres" id="1_5ernh"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2ajjg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x162m"]
+
+[node name="Snow" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.52229, 0, 0, 0, 1.52229, 0, 0, 0, 1.52229, 0, 0, 0)
+material_override = ExtResource("1_5ernh")
+mesh = SubResource("SphereMesh_2ajjg")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.693482, 0, 0, 0, 0.693482, 0, 0, 0, 0.693482, 0, 0.555818, 0)
+material_override = ExtResource("1_5ernh")
+mesh = SubResource("SphereMesh_2ajjg")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D2"]
+transform = Transform3D(0.689677, 0, 0, 0, 0.689677, 0, 0, 0, 0.689677, 0, 0.679789, 0)
+material_override = ExtResource("1_5ernh")
+mesh = SubResource("SphereMesh_2ajjg")
+skeleton = NodePath("../../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D2"]
+transform = Transform3D(0.203182, 0, 0, 0, 0.221803, 0, 0, 0, 1.6173, 0, 0, 0.00271058)
+material_override = ExtResource("1_5ernh")
+mesh = SubResource("BoxMesh_x162m")
