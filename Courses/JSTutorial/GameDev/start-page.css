@@ -1,0 +1,22 @@
+canvas {
+    border: 3px solid darkslategrey;
+    background: lightblue;
+}
+
+canvas.end {
+    border: 3px dotted darkred;
+    background: grey;
+    opacity: 40%;
+}
+
+h2 {
+    position: absolute;
+    visibility: hidden;
+    transform: translate(100px, -475px);
+    font-size: 120px;
+    color: orange;
+}
+
+h2.end {
+    visibility: visible;
+}
