@@ -1,5 +1,5 @@
 import Canvas from './canvas.js';
-import {GameCharacter} from "./gameCharacter.js";
+import {GameCharacter} from "./model/gameCharacter.js";
 import drawToCanvas, {loadSprites} from "./canvasDrawer.js";
 
 const GameState = Object.freeze({
