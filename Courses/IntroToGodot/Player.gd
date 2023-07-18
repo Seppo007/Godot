@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+const MOVE_SPEED: float = 200.0
+
 func _physics_process(delta):
 	velocity = Vector2()
 	
@@ -12,6 +14,6 @@ func _physics_process(delta):
 	if (Input.is_key_pressed(KEY_DOWN)):
 		velocity.y += 1
 		
-	velocity *= 100.0
+	velocity *= MOVE_SPEED
 				
 	move_and_slide()
