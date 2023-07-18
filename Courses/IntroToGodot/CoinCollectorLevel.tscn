@@ -40,3 +40,24 @@ position = Vector2(70, 100)
 
 [node name="Coin6" parent="." instance=ExtResource("3_rngop")]
 position = Vector2(150, 0)
+
+[node name="Coin7" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(-220, -101)
+
+[node name="Coin8" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(-295, 11)
+
+[node name="Coin9" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(-247, 165)
+
+[node name="Coin10" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(212, 141)
+
+[node name="Coin11" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(313, 22)
+
+[node name="Coin12" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(262, -129)
+
+[node name="Coin13" parent="." instance=ExtResource("3_rngop")]
+position = Vector2(-9, -186)
