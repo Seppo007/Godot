@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://ivjmnvyu38su"]
+[gd_scene load_steps=3 format=3 uid="uid://ivjmnvyu38su"]
 
-[node name="Main" type="Node2D"]
+[ext_resource type="Script" path="res://Loops/Loops.gd" id="1_6uqdp"]
+[ext_resource type="PackedScene" uid="uid://c0s3gxrdp8fx4" path="res://Loops/Star.tscn" id="2_k58un"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("main_camera")]
+script = ExtResource("1_6uqdp")
+main_camera = NodePath("Camera")
+
+[node name="Star" parent="." instance=ExtResource("2_k58un")]
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
