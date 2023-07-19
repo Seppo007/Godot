@@ -2,3 +2,4 @@
 .godot/
 *.import
 Physics/Sprites/*.png
+Loops/Sprites/*.png
