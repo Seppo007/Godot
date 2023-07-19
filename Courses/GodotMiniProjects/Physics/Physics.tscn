@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bcjxsymchvi8m" path="res://Physics/Sprites/PhysicsCharacter.png" id="1_gs8nv"]
 [ext_resource type="Script" path="res://Physics/Physics.gd" id="1_wxmpw"]
-[ext_resource type="PackedScene" uid="uid://c7r34mwoheaig" path="res://Crate.tscn" id="3_ai6gv"]
+[ext_resource type="PackedScene" uid="uid://c7r34mwoheaig" path="res://Physics/Crate.tscn" id="3_ai6gv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vea3m"]
 
