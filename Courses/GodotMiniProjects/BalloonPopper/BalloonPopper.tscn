@@ -1,29 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkbninowa221w"]
+[gd_scene load_steps=4 format=3 uid="uid://dkbninowa221w"]
 
-[ext_resource type="Script" path="res://BalloonPopper/Balloon.gd" id="1_lftfs"]
-[ext_resource type="Material" uid="uid://de6sq1x1vhvt1" path="res://BalloonPopper/Material/Balloon.tres" id="1_xw6j0"]
+[ext_resource type="Script" path="res://BalloonPopper/BalloonManager.gd" id="1_savd6"]
+[ext_resource type="PackedScene" uid="uid://ddftdpj4ynx1r" path="res://BalloonPopper/Balloon.tscn" id="2_au3dc"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_qjbmk"]
+[sub_resource type="LabelSettings" id="LabelSettings_23akl"]
+line_spacing = 4.0
+font_size = 46
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_sotnw"]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("score_text")]
+script = ExtResource("1_savd6")
+score_text = NodePath("Label")
 
-[node name="Main" type="Node3D"]
+[node name="Balloon" parent="." instance=ExtResource("2_au3dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31603, -1.03904, -0.0716999)
+clicks_to_pop = 3
 
-[node name="Balloon" type="Area3D" parent="."]
-script = ExtResource("1_lftfs")
+[node name="Balloon2" parent="." instance=ExtResource("2_au3dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.146418, -0.165639, -1.52823)
+clicks_to_pop = 7
 
-[node name="Model" type="MeshInstance3D" parent="Balloon"]
-mesh = SubResource("SphereMesh_qjbmk")
-surface_material_override/0 = ExtResource("1_xw6j0")
+[node name="Balloon3" parent="." instance=ExtResource("2_au3dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63644, 0.617713, -0.0473974)
+clicks_to_pop = 4
+SIZE_INCREASE = 0.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Balloon"]
-shape = SubResource("SphereShape3D_sotnw")
+[node name="Balloon4" parent="." instance=ExtResource("2_au3dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40168, 1.21066, -0.439878)
+clicks_to_pop = 6
+SIZE_INCREASE = 0.1
+
+[node name="Balloon5" parent="." instance=ExtResource("2_au3dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7373, -0.800465, -0.0923095)
+clicks_to_pop = 3
+SIZE_INCREASE = 0.4
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.127078, 2.7342)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.837595, -0.25598, 0.482607, 0, 0.883422, 0.468578, -0.546292, -0.392478, 0.73995, 0, 2.53651, 0)
 
-[connection signal="input_event" from="Balloon" to="Balloon" method="_on_input_event"]
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 230.0
+offset_bottom = 100.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_23akl")
