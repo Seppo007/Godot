@@ -4,6 +4,7 @@
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("main_camera")]
 script = ExtResource("1_6uqdp")
+spawn_count = 600
 main_camera = NodePath("Camera")
 
 [node name="Camera" type="Camera2D" parent="."]
