@@ -94,7 +94,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_ile2j")
 
 [node name="Camera" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 4.6, 3.7)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 3.75, 3.5)
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
