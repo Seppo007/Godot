@@ -22,3 +22,4 @@ project/assembly_name="2DPlatformer"
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.607843, 0.435294, 0.815686, 1)
