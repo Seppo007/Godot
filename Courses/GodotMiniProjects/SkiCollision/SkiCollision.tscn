@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b8xomupuuvspd"]
+[gd_scene load_steps=21 format=3 uid="uid://b8xomupuuvspd"]
 
 [ext_resource type="Script" path="res://SkiCollision/PlayerMovement.gd" id="1_op2t6"]
 [ext_resource type="PackedScene" uid="uid://bbmprip10vto1" path="res://SkiCollision/Tree.tscn" id="2_7ybtk"]
@@ -50,6 +50,12 @@ uv1_scale = Vector3(16, 4, 4)
 texture_filter = 1
 point_size = 128.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhbej"]
+size = Vector3(11.96, 5, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_un0yd"]
+size = Vector3(50, 1, 40)
+
 [node name="Main" type="Node3D"]
 
 [node name="Ground" type="StaticBody3D" parent="."]
@@ -61,7 +67,7 @@ mesh = SubResource("BoxMesh_dvg5j")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_336ma")
 
-[node name="Player" type="RigidBody3D" parent="."]
+[node name="Player" type="RigidBody3D" parent="." groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.6, 12.5)
 physics_material_override = SubResource("PhysicsMaterial_7xf6x")
 max_contacts_reported = 5
@@ -163,12 +169,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, -1.6, -4.25)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 2.6, 7.35)
 
 [node name="Goal" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, -14.13)
 collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Goal"]
-transform = Transform3D(11.96, 0, 0, 0, 5, 0, 0, 0, 0.02, 0, -2.5, -14.13)
+transform = Transform3D(11.96, 0, 0, 0, 5, 0, 0, 0, 0.02, 0, 0, 0)
 mesh = SubResource("BoxMesh_rmfn1")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_btr23")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Goal"]
+shape = SubResource("BoxShape3D_xhbej")
+
+[node name="OutOfGameArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OutOfGameArea"]
+shape = SubResource("BoxShape3D_un0yd")
+
 [connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
+[connection signal="body_entered" from="Goal" to="Player" method="_on_goal_body_entered"]
+[connection signal="body_entered" from="OutOfGameArea" to="Player" method="_on_out_of_game_area_body_entered"]
