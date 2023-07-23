@@ -6,40 +6,40 @@ from the Course when cloning this repo (https://academy.zenva.com/course/godot-4
 
 List of files in this folder:
 ├── Characters
-│   ├── character_0000.png
-│   ├── character_0001.png
-│   ├── character_0002.png 
-│  	├── character_0003.png 
+│	├── character_0000.png
+│	├── character_0001.png
+│	├── character_0002.png 
+│	├── character_0003.png 
 │	├── character_0004.png
-│   ├── character_0005.png 
-│  	├── character_0006.png 
+│	├── character_0005.png 
+│	├── character_0006.png 
 │	├── character_0007.png
-│   ├── character_0008.png 
-│  	├── character_0009.png 
+│	├── character_0008.png 
+│	├── character_0009.png 
 │	├── character_0010.png
-│   ├── character_0011.png 
-│  	├── character_0012.png 
+│	├── character_0011.png 
+│	├── character_0012.png 
 │	├── character_0013.png
-│  	├── character_0014.png
-│  	├── character_0015.png
-│  	├── character_0016.png
-│  	├── character_0017.png
-│  	├── character_0018.png
-│  	├── character_0019.png
-│  	├── character_0020.png
-│  	├── character_0021.png
-│  	├── character_0022.png
-│  	├── character_0023.png
-│  	├── character_0024.png
-│  	├── character_0025.png
-│  	└── character_0026.png
+│	├── character_0014.png
+│	├── character_0015.png
+│	├── character_0016.png
+│	├── character_0017.png
+│	├── character_0018.png
+│	├── character_0019.png
+│	├── character_0020.png
+│	├── character_0021.png
+│	├── character_0022.png
+│	├── character_0023.png
+│	├── character_0024.png
+│	├── character_0025.png
+│	└── character_0026.png
 │
 ├── Objects
-│   ├── tile_0044.png
-│   ├── tile_0067.png
-│   ├── tile_0068.png
-│   ├── tile_0112.png
-│   └── tile_0151.png
-│
+│	├── tile_0044.png
+│	├── tile_0067.png
+│	├── tile_0068.png
+│	├── tile_0112.png
+│	└── tile_0151.png
+│	
 └── Tiles
-    └── tiles_packed.png
+	└── tiles_packed.png
