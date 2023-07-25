@@ -716,7 +716,7 @@ position = Vector2(1125, -242)
 position = Vector2(1359, -242)
 
 [node name="EndFlag" parent="." instance=ExtResource("7_38x8j")]
-next_scene = "res://Level2.tscn"
+next_scene = "res://Scenes/Level2.tscn"
 
 [node name="Player" parent="." instance=ExtResource("6_6gtyl")]
 position = Vector2(-60, -12)
