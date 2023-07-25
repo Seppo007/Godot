@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1l0goos1yrpm"]
+[gd_scene load_steps=8 format=3 uid="uid://c1l0goos1yrpm"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_ae1si"]
-[ext_resource type="PackedScene" uid="uid://br3kgl1blx2c4" path="res://Spikes.tscn" id="3_kjykq"]
-[ext_resource type="PackedScene" uid="uid://piq63fkfm65i" path="res://Coin.tscn" id="4_odnte"]
-[ext_resource type="Script" path="res://Player.gd" id="5_p7fki"]
-[ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://Sprites/Characters/character_0004.png" id="6_nct7s"]
-[ext_resource type="PackedScene" uid="uid://cedohr4ndhtnu" path="res://EndFlag.tscn" id="7_r845m"]
+[ext_resource type="PackedScene" uid="uid://br3kgl1blx2c4" path="res://Scenes/Spikes.tscn" id="3_kjykq"]
+[ext_resource type="PackedScene" uid="uid://buqpohyrc2hmd" path="res://Scenes/Player.tscn" id="4_csc2p"]
+[ext_resource type="PackedScene" uid="uid://piq63fkfm65i" path="res://Scenes/Coin.tscn" id="4_odnte"]
+[ext_resource type="PackedScene" uid="uid://cedohr4ndhtnu" path="res://Scenes/EndFlag.tscn" id="7_r845m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uul55"]
 texture = ExtResource("1_ae1si")
@@ -643,14 +642,6 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_uul55")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vhf1y"]
-height = 24.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_46cmq"]
-font_size = 48
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -677,29 +668,7 @@ position = Vector2(1125, -242)
 [node name="Coin10" parent="Coins" instance=ExtResource("4_odnte")]
 position = Vector2(1359, -242)
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
-position = Vector2(1196, -318)
-script = ExtResource("5_p7fki")
-
-[node name="Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("6_nct7s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CapsuleShape2D_vhf1y")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -12)
-zoom = Vector2(3, 3)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-
-[node name="ScoreText" type="Label" parent="Player/CanvasLayer"]
-offset_left = 36.0
-offset_top = 18.0
-offset_right = 216.0
-offset_bottom = 88.0
-text = "Score: 0"
-label_settings = SubResource("LabelSettings_46cmq")
+[node name="Player" parent="." instance=ExtResource("4_csc2p")]
 
 [node name="EndFlag" parent="." instance=ExtResource("7_r845m")]
 position = Vector2(1683, -117)
