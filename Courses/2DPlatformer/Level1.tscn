@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://sreico6oye54"]
+[gd_scene load_steps=9 format=3 uid="uid://sreico6oye54"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_lf3y6"]
 [ext_resource type="PackedScene" uid="uid://beo2ns6logr3o" path="res://Enemy.tscn" id="2_7c7wv"]
 [ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://Sprites/Characters/character_0004.png" id="2_gbxa6"]
 [ext_resource type="Script" path="res://Player.gd" id="2_trpdj"]
+[ext_resource type="PackedScene" uid="uid://br3kgl1blx2c4" path="res://Spikes.tscn" id="3_myfpy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uul55"]
 texture = ExtResource("1_lf3y6")
@@ -663,8 +664,22 @@ position = Vector2(855, -64)
 move_speed = 70.0
 move_direction = Vector2(100, 0)
 
+[node name="Spikes" parent="." instance=ExtResource("3_myfpy")]
+
+[node name="Spikes2" parent="." instance=ExtResource("3_myfpy")]
+position = Vector2(712, -117)
+
+[node name="Spikes3" parent="." instance=ExtResource("3_myfpy")]
+position = Vector2(820, -117)
+
+[node name="Spikes4" parent="." instance=ExtResource("3_myfpy")]
+position = Vector2(946, -45)
+
+[node name="Spikes5" parent="." instance=ExtResource("3_myfpy")]
+position = Vector2(42, -9)
+
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
-position = Vector2(-40, -12)
+position = Vector2(368, -48)
 script = ExtResource("2_trpdj")
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
