@@ -1,12 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://brm1crh8nbmoo"]
+[gd_scene load_steps=10 format=3 uid="uid://brm1crh8nbmoo"]
 
 [ext_resource type="PackedScene" uid="uid://brp4ib5vf32bg" path="res://Platforms/PlatformLarge.tscn" id="1_xf8qr"]
 [ext_resource type="Script" path="res://Player.gd" id="2_78xnu"]
 [ext_resource type="ArrayMesh" uid="uid://ipv6okbuu6ui" path="res://Models/characterVampire.obj" id="2_a1rid"]
+[ext_resource type="ArrayMesh" uid="uid://cxxqw3eqvgse3" path="res://Models/spikeBlock.obj" id="4_fcdnc"]
+[ext_resource type="Script" path="res://Enemy.gd" id="4_htwmg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_15gqb"]
 radius = 0.3
 height = 1.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fsjl"]
+albedo_color = Color(0.894118, 0.894118, 0.894118, 1)
+metallic = 0.65
+metallic_specular = 0.65
+roughness = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eashr"]
+albedo_color = Color(0.917647, 0, 0, 1)
+metallic = 0.5
+roughness = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k5fmm"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [node name="Main" type="Node3D"]
 
@@ -76,3 +92,18 @@ fov = 60.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.597029, -0.639193, 0.484757, 0.107538, 0.662583, 0.741228, -0.794979, -0.390405, 0.464319, 0, 6.3142, 0)
 shadow_enabled = true
+
+[node name="Enemy" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9873, -0.824859, 0)
+script = ExtResource("4_htwmg")
+move_direction = Vector3(0, 3, 0)
+
+[node name="Model" type="MeshInstance3D" parent="Enemy"]
+mesh = ExtResource("4_fcdnc")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6fsjl")
+surface_material_override/1 = SubResource("StandardMaterial3D_eashr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502025, 0)
+shape = SubResource("BoxShape3D_k5fmm")
