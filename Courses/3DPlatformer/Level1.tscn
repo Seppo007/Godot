@@ -10,28 +10,51 @@ height = 1.2
 
 [node name="Main" type="Node3D"]
 
-[node name="PlatformLarge" parent="." instance=ExtResource("1_xf8qr")]
+[node name="Platforms" type="Node" parent="."]
 
-[node name="PlatformLarge2" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge" parent="Platforms" instance=ExtResource("1_xf8qr")]
+
+[node name="PlatformLarge2" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(0.943638, -0.237957, -0.230052, 0.231186, 0.971276, -0.0563614, 0.236855, 0, 0.971545, 4.08438, 0.1616, 0)
 
-[node name="PlatformLarge3" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge3" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(0.85723, 0, 0.514933, 0, 1, 0, -0.514933, 0, 0.85723, 4.49063, 1.06136, -4.19828)
 
-[node name="PlatformLarge4" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge4" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(0.963972, 0.0857647, 0.251797, -0.0829806, 0.996315, -0.0216751, -0.252728, 0, 0.967537, -0.221809, 1.65742, -4.4092)
 
-[node name="PlatformLarge5" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge5" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(0.999999, -0.00153589, 0, 0.00153589, 0.999999, 0, 0, 0, 1, -4.57238, 2.0781, -4.4092)
 
-[node name="PlatformLarge6" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge6" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(0.836596, 0.109648, -0.536735, -0.0922872, 0.993971, 0.0592087, 0.539991, 0, 0.841671, -8.03378, 1.4851, -6.71569)
 
-[node name="PlatformLarge7" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge7" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(0.938992, -0.102373, 0.32835, 0.0673436, 0.990921, 0.116363, -0.337281, -0.0871521, 0.937361, -10.5853, -0.416795, -6.38195)
 
-[node name="PlatformLarge8" parent="." instance=ExtResource("1_xf8qr")]
+[node name="PlatformLarge8" parent="Platforms" instance=ExtResource("1_xf8qr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, -0.416795, -5.83002)
+
+[node name="PlatformLarge9" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 0.819152, -0.573577, 0, 0.573576, 0.819152, -15.203, 0.316, -8.18)
+
+[node name="PlatformLarge10" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, 0.714692, -12.0324)
+
+[node name="PlatformLarge11" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, 0.714692, -14.0162)
+
+[node name="PlatformLarge12" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, 0.714692, -15.9872)
+
+[node name="PlatformLarge13" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7472, 1.20633, -19.8404)
+
+[node name="PlatformLarge14" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88949, 1.69187, -19.8404)
+
+[node name="PlatformLarge15" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91198, 1.69187, -19.8404)
 
 [node name="Player" type="CharacterBody3D" parent="."]
 script = ExtResource("2_78xnu")
@@ -46,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.602964, 0)
 shape = SubResource("CapsuleShape3D_15gqb")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2, 4.5)
+transform = Transform3D(1, 0, 0, 0, 0.882948, 0.469472, 0, -0.469472, 0.882948, 0, 2.7, 3.8)
 current = true
 fov = 60.0
 
