@@ -26,7 +26,7 @@ func _physics_process(delta):
 	if input.length() > 0:
 		facing_angle = Vector2(input.y, input.x).angle()
 	
-	model.rotation.y =  lerp_angle(model.rotation.y, facing_angle, 0.2)
+	model.rotation.y = lerp_angle(model.rotation.y, facing_angle, 0.2)
 	
 	if(global_position.y < -5.0):
 		game_over()

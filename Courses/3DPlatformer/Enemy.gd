@@ -18,3 +18,8 @@ func _process(delta):
 			target_position = start_position + move_direction
 		else:
 			target_position = start_position
+
+
+func _on_body_entered(body):
+	if body.is_in_group("Player"):
+		body.game_over()
