@@ -5,7 +5,7 @@ var bob_height: float = 0.2
 var bob_speed: float = 3.0
 
 @onready var start_y: float = global_position.y
-var t: float = 0.0
+var t: float = randf()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
