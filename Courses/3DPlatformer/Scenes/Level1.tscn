@@ -1,0 +1,107 @@
+[gd_scene load_steps=5 format=3 uid="uid://brm1crh8nbmoo"]
+
+[ext_resource type="PackedScene" uid="uid://brp4ib5vf32bg" path="res://Platforms/PlatformLarge.tscn" id="1_xf8qr"]
+[ext_resource type="PackedScene" uid="uid://dpgdxig5w68os" path="res://Scenes/Player.tscn" id="2_o17ed"]
+[ext_resource type="PackedScene" uid="uid://7asgoct02c46" path="res://Scenes/Enemy.tscn" id="3_15vpv"]
+[ext_resource type="PackedScene" uid="uid://bocf4o52yl3jo" path="res://Scenes/Spikes.tscn" id="4_nrp1f"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="PlatformLarge" parent="Platforms" instance=ExtResource("1_xf8qr")]
+
+[node name="PlatformLarge2" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(0.943638, -0.237957, -0.230052, 0.231186, 0.971276, -0.0563614, 0.236855, 0, 0.971545, 4.08438, 0.1616, 0)
+
+[node name="PlatformLarge3" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(0.85723, 0, 0.514933, 0, 1, 0, -0.514933, 0, 0.85723, 4.49063, 1.06136, -4.19828)
+
+[node name="PlatformLarge4" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(0.963972, 0.0857647, 0.251797, -0.0829806, 0.996315, -0.0216751, -0.252728, 0, 0.967537, -0.221809, 1.65742, -4.4092)
+
+[node name="PlatformLarge5" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(0.999999, -0.00153589, 0, 0.00153589, 0.999999, 0, 0, 0, 1, -4.57238, 2.0781, -4.4092)
+
+[node name="PlatformLarge6" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(0.836596, 0.109648, -0.536735, -0.0922872, 0.993971, 0.0592087, 0.539991, 0, 0.841671, -8.03378, 1.4851, -6.71569)
+
+[node name="PlatformLarge7" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(0.938992, -0.102373, 0.32835, 0.0673436, 0.990921, 0.116363, -0.337281, -0.0871521, 0.937361, -10.5853, -0.416795, -6.38195)
+
+[node name="PlatformLarge8" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, -0.416795, -5.83002)
+
+[node name="PlatformLarge9" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 0.819152, -0.573577, 0, 0.573576, 0.819152, -15.203, 0.316, -8.18)
+
+[node name="PlatformLarge10" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, 0.714692, -12.0324)
+
+[node name="PlatformLarge11" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, 0.714692, -14.0162)
+
+[node name="PlatformLarge12" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2035, 0.714692, -15.9872)
+
+[node name="PlatformLarge13" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7472, 1.20633, -19.8404)
+
+[node name="PlatformLarge14" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88949, 1.69187, -19.8404)
+
+[node name="PlatformLarge15" parent="Platforms" instance=ExtResource("1_xf8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91198, 1.69187, -19.8404)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_15vpv")]
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_15vpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04378, 0.848172, -4.58702)
+move_speed = 3.4
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("3_15vpv")]
+transform = Transform3D(0.423646, 0, -0.905828, 0, 1, 0, 0.905828, 0, 0.423646, -6.49579, 1.28615, -5.26451)
+move_speed = 3.0
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("3_15vpv")]
+transform = Transform3D(0.983963, 0, 0.178373, 0, 1, 0, -0.178373, 0, 0.983963, -12.9183, -0.534562, -6.07199)
+move_speed = 2.5
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("3_15vpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8025, 1.14755, -19.8746)
+move_speed = 3.8
+
+[node name="Spikes" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.941529, -0.240333, -0.236144, 0.235252, 0.970653, -0.0498968, 0.241205, -0.00857405, 0.970436, 3.8777, 1.1349, 0)
+
+[node name="Spikes2" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.948485, 0.093261, 0.302784, -0.0769063, 0.994883, -0.0655233, -0.307346, 0.0388618, 0.950804, 0.26817, 2.61437, -4.89637)
+
+[node name="Spikes3" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.959234, 0.0917552, 0.267304, -0.0769063, 0.994883, -0.0655233, -0.271948, 0.0422948, 0.961382, -0.380983, 2.67434, -3.85778)
+
+[node name="Spikes4" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.956546, -0.0881907, 0.277924, 0.0567112, 0.991232, 0.11935, -0.286013, -0.0984028, 0.95316, -10.708, 0.556803, -6.41437)
+
+[node name="Spikes5" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.999602, -0.00942846, -0.026582, 0.0096026, 0.999934, 0.00643458, 0.0265193, -0.00668731, 0.999626, -15.12, 1.6967, -11.6708)
+
+[node name="Spikes6" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.999602, -0.00942846, -0.026582, 0.0096026, 0.999934, 0.00643458, 0.0265193, -0.00668731, 0.999626, -15.5681, 1.6967, -13.0443)
+
+[node name="Spikes7" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.999602, -0.00942846, -0.026582, 0.0096026, 0.999934, 0.00643458, 0.0265193, -0.00668731, 0.999626, -14.5551, 1.6967, -14.3203)
+
+[node name="Spikes8" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.999602, -0.00942846, -0.026582, 0.0096026, 0.999934, 0.00643458, 0.0265193, -0.00668731, 0.999626, -15.4999, 1.6967, -15.8204)
+
+[node name="Spikes9" parent="Enemies" instance=ExtResource("4_nrp1f")]
+transform = Transform3D(0.999602, -0.00942846, -0.026582, 0.0096026, 0.999934, 0.00643458, 0.0265193, -0.00668731, 0.999626, -9.73072, 2.68011, -19.7311)
+
+[node name="Player" parent="." instance=ExtResource("2_o17ed")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.597029, -0.639193, 0.484757, 0.107538, 0.662583, 0.741228, -0.794979, -0.390405, 0.464319, 0, 6.3142, 0)
+shadow_enabled = true
