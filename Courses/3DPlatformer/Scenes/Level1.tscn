@@ -1,15 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://brm1crh8nbmoo"]
+[gd_scene load_steps=7 format=3 uid="uid://brm1crh8nbmoo"]
 
 [ext_resource type="PackedScene" uid="uid://brp4ib5vf32bg" path="res://Platforms/PlatformLarge.tscn" id="1_xf8qr"]
 [ext_resource type="PackedScene" uid="uid://dpgdxig5w68os" path="res://Scenes/Player.tscn" id="2_o17ed"]
 [ext_resource type="PackedScene" uid="uid://7asgoct02c46" path="res://Scenes/Enemy.tscn" id="3_15vpv"]
 [ext_resource type="PackedScene" uid="uid://bocf4o52yl3jo" path="res://Scenes/Spikes.tscn" id="4_nrp1f"]
-[ext_resource type="Script" path="res://Scripts/Coin.gd" id="5_4kxnb"]
-[ext_resource type="ArrayMesh" uid="uid://kfppbk4xs3y8" path="res://Models/coinGold.obj" id="5_a24gb"]
+[ext_resource type="PackedScene" uid="uid://wrsic4hmopx8" path="res://Scenes/Coin.tscn" id="5_aixfy"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_7jacj"]
+[sub_resource type="Environment" id="Environment_mx8a4"]
+background_mode = 1
+background_color = Color(0.639216, 0.870588, 0.901961, 1)
 
 [node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mx8a4")
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -112,17 +116,4 @@ transform = Transform3D(0.999602, -0.00942846, -0.026582, 0.0096026, 0.999934, 0
 transform = Transform3D(0.597029, -0.639193, 0.484757, 0.107538, 0.662583, 0.741228, -0.794979, -0.390405, 0.464319, 0, 6.3142, 0)
 shadow_enabled = true
 
-[node name="Coin" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.621129, 0, 0)
-script = ExtResource("5_4kxnb")
-
-[node name="Model" type="MeshInstance3D" parent="Coin"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-mesh = ExtResource("5_a24gb")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Coin"]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.3, 0)
-shape = SubResource("SphereShape3D_7jacj")
-
-[connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
+[node name="Coin" parent="." instance=ExtResource("5_aixfy")]
