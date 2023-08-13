@@ -7,7 +7,7 @@
 
 [sub_resource type="Environment" id="Environment_mx8a4"]
 background_mode = 1
-background_color = Color(0.639216, 0.870588, 0.901961, 1)
+background_color = Color(0.596078, 0.968627, 0.682353, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xtebi"]
 size = Vector3(0.5, 1.15, 0.07)
