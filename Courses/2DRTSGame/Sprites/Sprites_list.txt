@@ -1,0 +1,9 @@
+This folder contains Sprites that are used in the Course.
+Because of the fact that the course does not mention if those Sprites are public domain,
+they will be tracked in the .gitignore file. You will have to manually download the files
+from the Course when cloning this repo (https://academy.zenva.com/course/godot-4-mini-projects/)
+
+
+List of files in this folder:
+├── tile_0084.png	
+└── tilemap.png
