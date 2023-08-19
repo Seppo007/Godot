@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://0hpo23m5osc8"]
+[gd_scene load_steps=8 format=3 uid="uid://0hpo23m5osc8"]
 
 [ext_resource type="Texture2D" uid="uid://devle4fgu74x7" path="res://Sprites/tilemap.png" id="1_tusym"]
+[ext_resource type="PackedScene" uid="uid://dm2fpoycgicoa" path="res://Unit.tscn" id="2_0dha6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bj4n"]
 texture = ExtResource("1_tusym")
@@ -156,3 +157,6 @@ navigation_polygon = SubResource("NavigationPolygon_kw66u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+
+[node name="Unit" parent="." instance=ExtResource("2_0dha6")]
+position = Vector2(-118, 13)
