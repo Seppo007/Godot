@@ -5,5 +5,7 @@ from the Course when cloning this repo (https://academy.zenva.com/course/godot-4
 
 
 List of files in this folder:
-├── tile_0084.png	
+├── tile_0060.png	
+├── tile_0096.png	
+├── tile_0121.png	
 └── tilemap.png
