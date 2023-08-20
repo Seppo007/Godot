@@ -19,6 +19,13 @@ var sprite: Sprite2D
 func _ready():
 	agent = $NavigationAgent2D
 	sprite = $Sprite
+	
+	var gm = get_node("/root/Main")
+	
+	if is_player:
+		gm.player_units.append(self)
+	else:
+		gm.enemy_units.append(self)
 
 func _process(delta):
 	_target_check()

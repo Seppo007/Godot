@@ -162,7 +162,25 @@ navigation_polygon = SubResource("NavigationPolygon_kw66u")
 zoom = Vector2(2.5, 2.5)
 
 [node name="PlayerUnit" parent="." instance=ExtResource("3_nnpxa")]
-position = Vector2(-114, -50)
+position = Vector2(-106, 68)
+
+[node name="PlayerUnit2" parent="." instance=ExtResource("3_nnpxa")]
+position = Vector2(-124, 91)
+
+[node name="PlayerUnit3" parent="." instance=ExtResource("3_nnpxa")]
+position = Vector2(-126, 44)
 
 [node name="EnemyUnit" parent="." instance=ExtResource("3_vcx3s")]
-position = Vector2(84, -42)
+position = Vector2(66, -59)
+
+[node name="EnemyUnit2" parent="." instance=ExtResource("3_vcx3s")]
+position = Vector2(103, -33)
+
+[node name="EnemyUnit3" parent="." instance=ExtResource("3_vcx3s")]
+position = Vector2(135, 3)
+
+[node name="EnemyUnit4" parent="." instance=ExtResource("3_vcx3s")]
+position = Vector2(135, -64)
+
+[node name="EnemyUnit5" parent="." instance=ExtResource("3_vcx3s")]
+position = Vector2(136, 53)
