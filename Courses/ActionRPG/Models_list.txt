@@ -12,27 +12,27 @@ List of files in this folder:
 	│	├── naturePack_001.mtl
 	│	├── naturePack_001.obj
 	│	├── naturePack_014.mtl
-	│   ├── naturePack_014.obj
+	│   	├── naturePack_014.obj
 	│	├── naturePack_015.mtl
-	│   ├── naturePack_015.obj
+	│   	├── naturePack_015.obj
 	│	├── naturePack_016.mtl
-	│   ├── naturePack_016.obj
+	│   	├── naturePack_016.obj
 	│	├── naturePack_017.mtl
-	│   ├── naturePack_017.obj
+	│   	├── naturePack_017.obj
 	│	├── naturePack_018.mtl
-	│   ├── naturePack_018.obj
+	│   	├── naturePack_018.obj
 	│	├── naturePack_019.mtl
-	│   ├── naturePack_019.obj
+	│   	├── naturePack_019.obj
 	│	├── naturePack_020.mtl
-	│   ├── naturePack_020.obj
+	│   	├── naturePack_020.obj
 	│	├── naturePack_021.mtl
-	│   ├── naturePack_021.obj
+	│   	├── naturePack_021.obj
 	│	├── naturePack_022.mtl
-	│   ├── naturePack_022.obj
+	│   	├── naturePack_022.obj
 	│	├── naturePack_065.mtl
-	│   ├── naturePack_065.obj
+	│   	├── naturePack_065.obj
 	│	├── naturePack_066.mtl
-	│   └── naturePack_066.obj
+	│   	└── naturePack_066.obj
 	│
 	├── Blade.material
 	├── Gold.material
