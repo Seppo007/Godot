@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://0hpo23m5osc8"]
+[gd_scene load_steps=9 format=3 uid="uid://0hpo23m5osc8"]
 
 [ext_resource type="Texture2D" uid="uid://devle4fgu74x7" path="res://Sprites/tilemap.png" id="1_tusym"]
-[ext_resource type="PackedScene" uid="uid://dm2fpoycgicoa" path="res://Unit.tscn" id="2_0dha6"]
+[ext_resource type="PackedScene" uid="uid://b7udmw6ggcbsx" path="res://Scenes/PlayerUnit.tscn" id="3_nnpxa"]
+[ext_resource type="PackedScene" uid="uid://8coreiau0ykn" path="res://Scenes/EnemyUnit.tscn" id="3_vcx3s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bj4n"]
 texture = ExtResource("1_tusym")
@@ -158,9 +159,8 @@ navigation_polygon = SubResource("NavigationPolygon_kw66u")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 
-[node name="Unit" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_0dha6")]
-position = Vector2(-118, 13)
-target = NodePath("../Unit2")
+[node name="PlayerUnit" parent="." instance=ExtResource("3_nnpxa")]
+position = Vector2(-115, -18)
 
-[node name="Unit2" parent="." instance=ExtResource("2_0dha6")]
-position = Vector2(122, 17)
+[node name="EnemyUnit" parent="." instance=ExtResource("3_vcx3s")]
+position = Vector2(84, -42)
