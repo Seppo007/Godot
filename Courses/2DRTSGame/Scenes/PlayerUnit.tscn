@@ -6,9 +6,10 @@
 
 [node name="PlayerUnit" instance=ExtResource("1_osewu")]
 script = ExtResource("2_46efv")
+is_player = true
 
 [node name="SelectionVisual" type="Sprite2D" parent="." index="0"]
 visible = false
 self_modulate = Color(0, 1, 0.133333, 1)
-position = Vector2(0, 6)
+position = Vector2(0, 5)
 texture = ExtResource("2_yxj1x")

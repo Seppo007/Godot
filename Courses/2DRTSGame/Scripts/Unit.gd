@@ -18,7 +18,7 @@ var sprite: Sprite2D
 
 func _ready():
 	agent = $NavigationAgent2D
-	sprite = $Sprite2D
+	sprite = $Sprite
 
 func _process(delta):
 	_target_check()
