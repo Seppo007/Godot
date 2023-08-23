@@ -15,8 +15,13 @@ var gravity: float = 15.0
 
 var vel: Vector3 = Vector3()
 
-@onready var camera = get_node("CameraOrbit")
-@onready var attack_ray_cast = get_node("AttackRayCast")
+@onready var camera: Node3D = get_node("CameraOrbit")
+@onready var attack_ray_cast: RayCast3D = get_node("AttackRayCast")
+@onready var sword_animator: AnimationPlayer = get_node("WeaponHolder/SwordAnimator")
+
+func _process(delta):
+	if Input.is_action_just_pressed("attack"):
+		_try_attack()
 
 func _physics_process(delta):
 	vel.x = 0
@@ -41,11 +46,27 @@ func _physics_process(delta):
 	
 	vel.y -= gravity * delta
 	vel.x = direction.x * move_speed
-	vel.z = direction.z * move_speed	
+	vel.z = direction.z * move_speed
 		
 	velocity = vel
 	
 	move_and_slide()
+	
+func _try_attack():
+	var current_time = Time.get_ticks_msec()
+	if current_time - last_attack_time < attack_rate * 1000:
+		return
+		
+	last_attack_time = current_time
+	sword_animator.stop()
+	sword_animator.play("attack")
+	
+	if attack_ray_cast.is_colliding():
+		var collider = attack_ray_cast.get_collider()
+		if collider.has_method("take_damage"):
+			collider.take_damage(damage)
+		
+	
 	
 func give_gold(amount):
 	gold += amount
