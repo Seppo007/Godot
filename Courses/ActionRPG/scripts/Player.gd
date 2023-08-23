@@ -49,3 +49,11 @@ func _physics_process(delta):
 	
 func give_gold(amount):
 	gold += amount
+	
+func take_damage(damage_to_take):
+	current_hp -= damage_to_take
+	if current_hp <= 0:
+		_die()
+
+func _die():
+	get_tree().reload_current_scene()

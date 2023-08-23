@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dj0psroevu7su"]
+[gd_scene load_steps=19 format=3 uid="uid://dj0psroevu7su"]
 
 [ext_resource type="ArrayMesh" uid="uid://c1ph8xb75hkas" path="res://models/Environment/naturePack_001.obj" id="1_pwkjh"]
 [ext_resource type="ArrayMesh" uid="uid://cahsss5y5cu5l" path="res://models/Environment/naturePack_019.obj" id="2_r3off"]
@@ -7,6 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cuswhgnljipfe" path="res://models/Environment/naturePack_065.obj" id="5_3h8wo"]
 [ext_resource type="PackedScene" uid="uid://e1qarxhyqem6" path="res://scenes/GoldCoin.tscn" id="6_guip4"]
 [ext_resource type="PackedScene" uid="uid://dx7baj3tmxd5a" path="res://scenes/Player.tscn" id="6_ssam1"]
+[ext_resource type="PackedScene" uid="uid://dyro3i50w2b3i" path="res://scenes/Enemy.tscn" id="8_drr5h"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gqknb"]
 data = PackedVector3Array(0, 0, 0, 3, 0.3, 0, 3, 0, 0, 3, 0.3, 0, 0, 0, 0, 0, 0.3, 0, 0, 0.3, -3, 3, 0.3, 0, 0, 0.3, 0, 3, 0.3, 0, 0, 0.3, -3, 3, 0.3, -3, 3, 0, -3, 3, 0.3, 0, 3, 0.3, -3, 3, 0.3, 0, 3, 0, -3, 3, 0, 0, 3, 0, -3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, -3, 0, 0, -3, 0, 0.3, -3, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0.3, -3, 0, 0.3, 0, 3, 0, -3, 0, 0.3, -3, 0, 0, -3, 0, 0.3, -3, 3, 0, -3, 3, 0.3, -3)
@@ -289,3 +290,6 @@ environment = SubResource("Environment_uwemj")
 
 [node name="Player" parent="." instance=ExtResource("6_ssam1")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.3, 0)
+
+[node name="Enemy" parent="." instance=ExtResource("8_drr5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592798, 0.300001, -6.10017)
