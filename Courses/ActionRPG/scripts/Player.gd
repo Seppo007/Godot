@@ -46,3 +46,6 @@ func _physics_process(delta):
 	velocity = vel
 	
 	move_and_slide()
+	
+func give_gold(amount):
+	gold += amount

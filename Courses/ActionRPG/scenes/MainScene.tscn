@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dj0psroevu7su"]
+[gd_scene load_steps=18 format=3 uid="uid://dj0psroevu7su"]
 
 [ext_resource type="ArrayMesh" uid="uid://c1ph8xb75hkas" path="res://models/Environment/naturePack_001.obj" id="1_pwkjh"]
 [ext_resource type="ArrayMesh" uid="uid://cahsss5y5cu5l" path="res://models/Environment/naturePack_019.obj" id="2_r3off"]
 [ext_resource type="ArrayMesh" uid="uid://cbrtsfmnvrotk" path="res://models/Environment/naturePack_016.obj" id="3_3q2l4"]
 [ext_resource type="ArrayMesh" uid="uid://cho1khnndjhnm" path="res://models/Environment/naturePack_066.obj" id="4_vwxx4"]
 [ext_resource type="ArrayMesh" uid="uid://cuswhgnljipfe" path="res://models/Environment/naturePack_065.obj" id="5_3h8wo"]
+[ext_resource type="PackedScene" uid="uid://e1qarxhyqem6" path="res://scenes/GoldCoin.tscn" id="6_guip4"]
 [ext_resource type="PackedScene" uid="uid://dx7baj3tmxd5a" path="res://scenes/Player.tscn" id="6_ssam1"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gqknb"]
@@ -258,6 +259,26 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Models/Tree14/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_l08kx")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource("6_guip4")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 10.1202, 4.60965, 0.370115)
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("6_guip4")]
+transform = Transform3D(0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, 0.422618, 9.40084, 7.03992, 8.62996)
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("6_guip4")]
+transform = Transform3D(-0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, -0.573576, -3.37339, 2.70015, 10.0934)
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource("6_guip4")]
+transform = Transform3D(-0.996195, 0, -0.0871558, 0, 1, 0, 0.0871558, 0, -0.996195, -7.78856, 3.7417, 7.76181)
+
+[node name="GoldCoin5" parent="Coins" instance=ExtResource("6_guip4")]
+transform = Transform3D(-0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, -0.766044, -11.1374, 5.18829, 2.75661)
+
+[node name="GoldCoin6" parent="Coins" instance=ExtResource("6_guip4")]
+transform = Transform3D(-0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, -0.34202, -8.12848, 6.80847, -8.12173)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, 0.742404, -0.519837, 0, 0.573576, 0.819152, 0.906308, 0.346189, -0.242404, 0, 15, 0)
