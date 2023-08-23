@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://jo3vt3ivfruk"]
+[gd_scene load_steps=4 format=3 uid="uid://jo3vt3ivfruk"]
 
 [ext_resource type="Texture2D" uid="uid://dvlcm0ysnaftu" path="res://ui/UI_WhiteSquare.png" id="1_dcugl"]
+[ext_resource type="Script" path="res://scripts/UI.gd" id="1_qywue"]
 [ext_resource type="FontFile" uid="uid://cnt288ek5qt0k" path="res://fonts/Ubuntu-Regular.ttf" id="2_24ry4"]
 
 [node name="UI" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qywue")
 
 [node name="HealthBar" type="TextureProgressBar" parent="."]
 layout_mode = 1
@@ -21,7 +23,7 @@ offset_top = -56.0
 offset_right = 232.0
 offset_bottom = -31.0
 grow_vertical = 0
-value = 50.0
+value = 100.0
 nine_patch_stretch = true
 texture_under = ExtResource("1_dcugl")
 texture_progress = ExtResource("1_dcugl")
@@ -40,4 +42,4 @@ offset_bottom = -57.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_24ry4")
 theme_override_font_sizes/font_size = 30
-text = "Gold: 100"
+text = "Gold: 0"

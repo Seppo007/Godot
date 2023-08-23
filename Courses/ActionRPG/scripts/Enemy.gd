@@ -4,7 +4,7 @@ var current_hp: int = 3
 var maximum_hp: int = 3
 
 var damage: int = 1
-var attack_dist: float = 1.5
+var attack_dist: float = 2.5
 var attack_rate: float = 1.0
 
 var move_speed: float = 2.5

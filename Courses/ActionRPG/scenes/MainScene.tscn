@@ -49,6 +49,10 @@ sky = SubResource("Sky_4e5k6")
 
 [node name="MainScene" type="Node3D"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("9_nqp5v")]
+
 [node name="Models" type="Node" parent="."]
 
 [node name="Ground" type="MeshInstance3D" parent="Models"]
@@ -282,6 +286,14 @@ transform = Transform3D(-0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, -0.766044
 [node name="GoldCoin6" parent="Coins" instance=ExtResource("6_guip4")]
 transform = Transform3D(-0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, -0.34202, -8.12848, 6.80847, -8.12173)
 
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource("8_drr5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3322, 0.300001, -5.86077)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("8_drr5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53033, 0.300001, -10.4492)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, 0.742404, -0.519837, 0, 0.573576, 0.819152, 0.906308, 0.346189, -0.242404, 0, 15, 0)
 shadow_enabled = true
@@ -291,10 +303,3 @@ environment = SubResource("Environment_uwemj")
 
 [node name="Player" parent="." instance=ExtResource("6_ssam1")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.3, 0)
-
-[node name="Enemy" parent="." instance=ExtResource("8_drr5h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592798, 0.300001, -6.10017)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" parent="CanvasLayer" instance=ExtResource("9_nqp5v")]
