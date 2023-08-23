@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx7baj3tmxd5a"]
+[gd_scene load_steps=6 format=3 uid="uid://dx7baj3tmxd5a"]
 
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_1h4y1"]
+[ext_resource type="Script" path="res://scripts/CameraOrbit.gd" id="1_2dlpa"]
 [ext_resource type="PackedScene" uid="uid://cdlay2gqkwvc2" path="res://models/Sword.dae" id="1_5ft4t"]
-[ext_resource type="Script" path="res://CameraOrbit.gd" id="1_kbnoi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8at5i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xdulw"]
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_1h4y1")
 
 [node name="Model" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -19,7 +21,7 @@ shape = SubResource("CapsuleShape3D_xdulw")
 
 [node name="CameraOrbit" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("1_kbnoi")
+script = ExtResource("1_2dlpa")
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrbit"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 1, -5)
