@@ -36,7 +36,6 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-
 func take_damage(damage_to_take):
 	current_hp -= damage_to_take
 	if current_hp <= 0:
