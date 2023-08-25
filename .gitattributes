@@ -1,6 +1,0 @@
-*.html linguist-detectable=false
-
-*.gd linguist-detectable=true
-*.gd linguist-language=GDScript
-Zenva/Courses/* linguist-vendored=true
-Zenva/Courses/**/* linguist-vendored=true
