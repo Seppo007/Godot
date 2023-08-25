@@ -1,2 +1,4 @@
-*.gd linguist-detectable=true
 *.html linguist-detectable=false
+
+*.gd linguist-detectable=true
+*.gd linguist-language=GDScript
