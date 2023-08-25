@@ -1,6 +1,6 @@
-# Zenva
-Zenva Courses and other related stuff
+# Godot
+Godot trainings and PoCs
 
-## [Wiki](https://github.com/Seppo007/Zenva/wiki)
+## [Wiki](https://github.com/Seppo007/Godot/wiki)
 Containing links to deployed demo apps and source code
 
