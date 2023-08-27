@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var orbiter: Node3D = get_node("Orbiter")
+@onready var orbiter: Node3D = get_node("Orbiter") as Node3D
 var _last_mouse_pos: Vector2
 var _mouse_move: float = 0.0
 
