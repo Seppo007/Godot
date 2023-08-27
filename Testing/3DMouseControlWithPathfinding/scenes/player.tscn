@@ -15,8 +15,8 @@ axis_lock_linear_y = true
 script = ExtResource("1_l7c6x")
 
 [node name="NavAgent" type="NavigationAgent3D" parent="."]
-path_desired_distance = 0.8
-target_desired_distance = 0.8
+path_desired_distance = 0.6
+target_desired_distance = 0.6
 path_max_distance = 5.01
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
