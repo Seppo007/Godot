@@ -10,7 +10,7 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wxtkw"]
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.3, 0, 0.45, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
 axis_lock_linear_y = true
 script = ExtResource("1_l7c6x")
 
@@ -20,8 +20,10 @@ target_desired_distance = 0.8
 path_max_distance = 5.01
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_s7y2d")
 surface_material_override/0 = SubResource("StandardMaterial3D_jqj4s")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_wxtkw")

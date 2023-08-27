@@ -20,6 +20,41 @@ offset_bottom = 45.0
 text = "Current Navigation Type:"
 label_settings = SubResource("LabelSettings_rpc0b")
 
+[node name="Control" type="Control" parent="Canvas"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -48.0
+offset_right = 60.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[node name="DirectButton" type="Button" parent="Canvas/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_right = 80.0
+offset_bottom = -50.0
+grow_vertical = 0
+text = "Direct"
+
+[node name="AgentButton" type="Button" parent="Canvas/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 16.191
+anchor_bottom = 16.191
+offset_top = -647.64
+offset_right = 80.0
+offset_bottom = -607.64
+text = "Agent"
+
+[node name="Player" parent="." instance=ExtResource("2_0i7jq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.45, 0)
+
 [node name="Surrounding" parent="." instance=ExtResource("1_dfg4t")]
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
@@ -34,8 +69,6 @@ directional_shadow_fade_start = 1.0
 directional_shadow_max_distance = 20.0
 directional_shadow_pancake_size = 5.0
 sky_mode = 1
-
-[node name="Player" parent="." instance=ExtResource("2_0i7jq")]
 
 [node name="Orbiter" type="Node3D" parent="."]
 

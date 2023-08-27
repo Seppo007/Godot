@@ -1,35 +1,19 @@
 extends CharacterBody3D
 
 @export var move_speed: float = 1.0
-@onready var _navigation_label: Label = get_node("/root/Main/Canvas/NavigationTypeLabel") as Label
 @onready var nav_agent: NavigationAgent3D = get_node("NavAgent") as NavigationAgent3D
 
-var _is_direct_nav_mode: bool
 var destination: Vector3
+var _is_direct_nav_mode: bool
 
-func _ready():
-	_is_direct_nav_mode = true
-	_navigation_label.text = "Current Navigation Type: direct"
-	
-func _update_label():
-	if _is_direct_nav_mode:		
-		_navigation_label.text = "Current Navigation Type: direct"
-	else:
-		_navigation_label.text = "Current Navigation Type: agent"
-	
-func _input(event):
-	if event is InputEventKey and event.is_pressed():
-		if(event as InputEventKey).keycode == KEY_Q:
-			_is_direct_nav_mode = true
-		if(event as InputEventKey).keycode == KEY_W:
-			_is_direct_nav_mode = false
-		_update_label()
-	
+func set_direct_nav_mode(direct: bool):
+	_is_direct_nav_mode = direct
+		
+func _input(event):	
 	if event is InputEventMouseButton and event.is_pressed():
 		if (event as InputEventMouseButton).button_index == MOUSE_BUTTON_LEFT:
 			var move_pos = _get_mouse_position_in_space(event)
 			_move_to(move_pos)
-		
 
 func _get_mouse_position_in_space(event: InputEventMouseButton):
 	var camera: Camera3D = get_node("/root/Main/Orbiter/Camera3D") as Camera3D
